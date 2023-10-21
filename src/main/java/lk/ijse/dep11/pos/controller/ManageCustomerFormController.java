@@ -34,6 +34,7 @@ public class ManageCustomerFormController {
 
     public void initialize(){
         tblCustomers.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("id"));
+        tblCustomers.getColumns().get(0).setStyle("-fx-alignment: center;");
         tblCustomers.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("name"));
         tblCustomers.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("address"));
         txtCustomerId.setEditable(false);
