@@ -24,7 +24,7 @@ public class CustomerDataAccess {
             STM_GET_ALL = connection.prepareStatement("SELECT * FROM customer ORDER BY id");
             STM_SAVE = connection.prepareStatement("INSERT INTO customer (id, name, address) VALUES (?, ?, ?)");
             STM_DELETE = connection.prepareStatement("DELETE FROM customer WHERE id=?");
-            STM_UPDATE = connection.prepareStatement("UPDATE customer SET name=? address=? WHERE id=?");
+            STM_UPDATE = connection.prepareStatement("UPDATE customer SET name=?, address=? WHERE id=?");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

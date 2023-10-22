@@ -101,7 +101,7 @@ public class ManageCustomerFormController {
 
         Customer customer = new Customer(txtCustomerId.getText(), txtCustomerName.getText().strip(), txtCustomerAddress.getText().strip());
         try {
-            if (btnSave.getText().equals("SAVE")){
+            if (btnSave.getText().equalsIgnoreCase("SAVE")){
                 CustomerDataAccess.saveCustomer(customer);
                 tblCustomers.getItems().add(customer);
             }else {
