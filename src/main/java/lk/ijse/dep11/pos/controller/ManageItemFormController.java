@@ -151,6 +151,7 @@ public class ManageItemFormController {
     public void btnDelete_OnAction(ActionEvent actionEvent) {
         Item selectedItem = tblItems.getSelectionModel().getSelectedItem();
         try {
+            /*to do if order exists*/
             ItemDataAccess.deleteItem(selectedItem.getCode());
             tblItems.getItems().remove(selectedItem);
             if (tblItems.getItems().isEmpty()) btnAddNew.fire();
